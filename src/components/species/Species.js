@@ -15,18 +15,24 @@ import { Footer } from '../footer/Footer';
 export const Species = () => {
   let {pathname}  = useLocation()
   const url = urlPage(pathname);
+
+  const [urlFetch, setUrlFetch] = useState(url);
+  const [previous, setPrevious] = useState(null);
+  const [next, setNext] = useState(null);
   
   const [load, setLoad] = useState(true);
-  const { data, loading } = useGetDataApi(url);
+  const { data, loading } = useGetDataApi(urlFetch, actions.ADD_SPECIES);
   const { dispatch } = useContext(AppContext);
 
   useEffect(() => {
     setLoad(loading);
+    setNext(data.next);
+    setPrevious(data.previous);
     dispatch({
       type: actions.ADD_SPECIES,
       payload: data.results
     })
-  }, [loading, data.results, dispatch]);
+  }, [loading, data.results, data.next, data.previous, urlFetch]);
 
   return (
    <>
@@ -34,7 +40,11 @@ export const Species = () => {
        {load === true ? <Spinner /> : <CardSpecies />}
      </section>
      <section className="card-person_pagination">
-        <Pagination />
+        <Pagination 
+          previous={previous}
+          next = {next}
+          setUrlFetch={setUrlFetch}
+        />
       </section>
       <Footer className="people-footer" />
    </>

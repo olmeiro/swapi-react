@@ -16,12 +16,18 @@ export const Vehicles = () => {
   let {pathname}  = useLocation();
   const url = urlPage(pathname);
 
+  const [urlFetch, setUrlFetch] = useState(url);
+  const [previous, setPrevious] = useState(null);
+  const [next, setNext] = useState(null);
+
   const [load, setLoad] = useState(true);
-  const { data, loading } = useGetDataApi(url, actions.ADD_VEHICLES);
+  const { data, loading } = useGetDataApi(urlFetch, actions.ADD_VEHICLES);
   const { dispatch } = useContext(AppContext);
   
   useEffect(() => {
     setLoad(loading);
+    setNext(data.next);
+    setPrevious(data.previous);
     dispatch({
       type: actions.ADD_VEHICLES,
       payload: data.results
@@ -34,7 +40,11 @@ export const Vehicles = () => {
        {load === true ? <Spinner /> : <CardVehicles />}
      </section>
      <section className="card-person_pagination">
-        <Pagination />
+        <Pagination 
+          previous={previous}
+          next = {next}
+          setUrlFetch={setUrlFetch}
+        />
       </section>
       <Footer className="people-footer" />
    </>

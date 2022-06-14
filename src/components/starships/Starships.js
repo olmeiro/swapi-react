@@ -16,12 +16,18 @@ export const Starships = () => {
   let {pathname}  = useLocation();
   const url = urlPage(pathname);
 
+  const [urlFetch, setUrlFetch] = useState(url);
+  const [previous, setPrevious] = useState(null);
+  const [next, setNext] = useState(null);
+
   const [load, setLoad] = useState(true);
-  const { data, loading } = useGetDataApi(url, actions.ADD_PEOPLE);
+  const { data, loading } = useGetDataApi(urlFetch, actions.ADD_PEOPLE);
   const { dispatch } = useContext(AppContext);
 
   useEffect(() => {
     setLoad(loading);
+    setNext(data.next);
+    setPrevious(data.previous);
     dispatch({
       type: actions.ADD_STARSHIPS,
       payload: data.results
@@ -34,7 +40,11 @@ export const Starships = () => {
        {load === true ? <Spinner /> : <CardStarships />}
      </section>
      <section className='card-person_pagination'>
-     <Pagination />
+     <Pagination 
+        previous={previous}
+        next = {next}
+        setUrlFetch={setUrlFetch}
+     />
     </section>
      <Footer className='people-footer' />
    </>
