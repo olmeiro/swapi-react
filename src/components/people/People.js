@@ -13,16 +13,16 @@ import { Footer } from "../footer/Footer";
 import "./style.css";
 
 export const People = () => {
-
   let { pathname } = useLocation();
   const url = urlPage(pathname);
   
-  const [load, setLoad] = useState(true);
-  const { data, loading } = useGetDataApi(url, actions.ADD_PEOPLE);
-  const { dispatch } = useContext(AppContext);
-
+  const [urlFetch, setUrlFetch] = useState(url);
   const [previous, setPrevious] = useState(null);
   const [next, setNext] = useState(null);
+
+  const [load, setLoad] = useState(true);
+  const { data, loading } = useGetDataApi(urlFetch, actions.ADD_PEOPLE);
+  const { dispatch } = useContext(AppContext);
   
   useEffect(() => {
     setLoad(loading); 
@@ -32,10 +32,8 @@ export const People = () => {
       type: actions.ADD_PEOPLE,
       payload: data.results
     })
-  }, [loading, data.results, data.next, data.previous, dispatch]);
+  }, [loading, data.results, data.next, data.previous, urlFetch]);
 
-  console.log("next", next);
-  console.log("prev", previous);
 
   return (
     <>
@@ -44,8 +42,9 @@ export const People = () => {
       </section>
       <section className="card-person_pagination">
         <Pagination 
-          // previous={previous}
-          // next = {next}
+          previous={previous}
+          next = {next}
+          setUrlFetch={setUrlFetch}
         />
       </section>
       <Footer className="people-footer" />

@@ -1,12 +1,9 @@
 import axios from 'axios';
-import { useState, useEffect, useContext } from 'react'
-import AppContext from '../context/AppContext';
+import { useState, useEffect } from 'react'
 
-const useGetDataApi = (API, type) => {
-  const { dispatch } = useContext(AppContext);
+const useGetDataApi = (API) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-
   
   useEffect( () => {
     const getData = async function getData() {
@@ -14,13 +11,9 @@ const useGetDataApi = (API, type) => {
       const { data } = response;
       setData(data);
       setLoading(false);
-      dispatch({
-        action: type,
-        payload: data.results
-      })
     }
     getData();
-  }, []);
+  }, [API]);
 
   return {data, loading};
 }

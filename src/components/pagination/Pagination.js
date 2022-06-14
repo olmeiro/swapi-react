@@ -1,26 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import "./style.css";
 
-export const Pagination = ({ previous, next }) => {
-
-  const handlePrevious = () => {
-    console.log("previousPagination", previous);
-  };
-
-  const handleNext = () => {
-    console.log("next", next);
-  };
-
+export const Pagination = ({ previous, next, setUrlFetch }) => {
+  const [numberPage, setNumberPage] = useState(1);
+  
   return (
     <div className="pagination">
-      <Link to="#" onClick={handlePrevious}>
-        &laquo;
+      <Link to="#" onClick={() => {setUrlFetch(previous); setNumberPage(numberPage - 1)}}>
+      &laquo; 
       </Link>
 
-      <Link to="#">1</Link>
-      <Link to="#" onClick={handleNext}>
+      <Link to="#" >
+        {numberPage}
+      </Link>
+
+      <Link to="#" onClick={() => {setUrlFetch(next); setNumberPage(numberPage + 1)}}>
         &raquo;
       </Link>
     </div>
