@@ -5,6 +5,8 @@ import { getDetails } from '../../helpers/getDetails'
 import useModal from '../../hooks/useModal'
 import Modal from '../modal/Modal'
 import { DetailsPlanet } from './DetailsPlanet'
+import { BsEye } from "react-icons/bs";
+
 
 import './style.css'
 
@@ -38,7 +40,7 @@ export const CardPlanets = () => {
           <p><span>terrain:</span> {planet.terrain}</p>
           <p><span>population:</span> {planet.population}</p>
         </article>
-          <Link className='link-planet'  to={`/planets/${idx + 1}`} onClick={openModal}>See more...</Link>
+          <Link className='link-planet'  to={`/planets/${idx + 1}`} onClick={openModal}><BsEye className='eye'/> See more...</Link>
         </section>
       ))
       }

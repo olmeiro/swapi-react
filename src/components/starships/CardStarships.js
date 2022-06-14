@@ -6,6 +6,9 @@ import useModal from '../../hooks/useModal';
 import Modal from '../modal/Modal';
 import { DetailsStarships } from './DetailsStarships';
 
+import { BsEye } from "react-icons/bs";
+
+
 import './style.css'
 
 export const CardStarships = () => { 
@@ -38,7 +41,7 @@ export const CardStarships = () => {
          <p><span>cargo_capacity:</span> {starship.cargo_capacity}</p>
          <p><span>consumables:</span> {starship.consumables}</p>
        </article>
-       <Link className='link-starships'  to={`/starships/${idx + 1}`} onClick={openModal}>See more...</Link>
+       <Link className='link-starships'  to={`/starships/${idx + 1}`} onClick={openModal}><BsEye className='eye'/> See more...</Link>
        </section>
       ))
       }

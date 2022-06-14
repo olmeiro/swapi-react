@@ -6,6 +6,9 @@ import useModal from '../../hooks/useModal';
 import Modal from '../modal/Modal';
 import { DetailsSpecies } from './DetailsSpecies';
 
+import { BsEye } from "react-icons/bs";
+
+
 import './style.css'
 
 export const CardSpecies = ({ data }) => { 
@@ -46,7 +49,7 @@ export const CardSpecies = ({ data }) => {
           <p><span>language:</span> {specie.language}</p>
         </article>
         <Link className='link-species'  to={`/species/${idx + 1}`}
-        onClick={openModal}>See more...</Link>
+        onClick={openModal}><BsEye className='eye'/> See more...</Link>
       </section>
       ))
       }

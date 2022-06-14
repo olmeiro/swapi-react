@@ -5,6 +5,8 @@ import { getDetails } from '../../helpers/getDetails';
 import useModal from '../../hooks/useModal';
 import Modal from '../modal/Modal';
 import { DetailsVehicles } from './DetailsVehicles';
+import { BsEye } from "react-icons/bs";
+
 
 import './style.css'
 
@@ -40,7 +42,7 @@ console.log(state)
         <p><span>cargo_capacity:</span> {vehicle.cargo_capacity}</p>
         <p><span>consumables:</span> {vehicle.consumables}</p>
       </article>
-      <Link className='link-vehicle'  to={`/vehicles/${idx + 1}`} onClick={openModal}>See more...</Link>
+      <Link className='link-vehicle'  to={`/vehicles/${idx + 1}`} onClick={openModal}><BsEye className='eye'/> See more...</Link>
       </section>
       ))
       }

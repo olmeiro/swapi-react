@@ -6,6 +6,8 @@ import useModal from "../../hooks/useModal";
 import Modal from "../modal/Modal";
 import { DetailsFilms } from "./DetailsFilms";
 
+import { BsEye } from "react-icons/bs";
+
 import "./style.css";
 
 export const CardFilms = () => {
@@ -59,7 +61,7 @@ export const CardFilms = () => {
             to={`/films/${idx + 1}`}
             onClick={openModal}
           >
-            See more...
+            <BsEye className='eye'/> See more...
           </Link>
         </section>
       ))}

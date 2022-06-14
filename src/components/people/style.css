@@ -12,12 +12,18 @@
  border-radius: 5px;
  bottom: 58px;
  color: var(--black);
- display: block;
+ display: flex;
  margin: 2px;
  padding: 6px;
  position: relative;
  text-align: center;
+ justify-content: center;
+ align-items: center;
  text-decoration: none;
+}
+
+.eye {
+  margin-right: 5px;
 }
 
 .link-person:hover {

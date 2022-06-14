@@ -4,6 +4,8 @@ import useInitialState from "./hooks/useInitialState";
 import AppContext from "./context/AppContext";
 import { AppRouter } from "./routers/AppRouter";
 
+import { IconContext } from "react-icons";
+
 import "./App.css";
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
 
   return (
     <AppContext.Provider value={initialState}>
-      <AppRouter />
+      <IconContext.Provider value={{ size: "1.2rem", className: "global-class-name" }}>
+        <AppRouter />
+      </IconContext.Provider>
     </AppContext.Provider>
   );
 }

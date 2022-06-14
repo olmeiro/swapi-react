@@ -5,7 +5,7 @@ import { getDetails } from '../../helpers/getDetails';
 import useModal from '../../hooks/useModal';
 import Modal from '../modal/Modal'
 import { DetailsPeople } from './DetailsPeople';
-import { AiFillEye } from "react-icons/ai";
+import { BsEye } from "react-icons/bs";
 
 import './style.css'
 
@@ -47,7 +47,7 @@ export const CardPeople = () => {
             <p><span>height:</span> {person.height}</p>
             <p><span>mass:</span> {person.mass}</p>
           </article>
-            <Link className='link-person' to={`/people/${idx + 1}`} onClick={openModal} ><AiFillEye /> See more...</Link>
+            <Link className='link-person' to={`/people/${idx + 1}`} onClick={openModal} ><BsEye className='eye'/> See more...</Link>
         </section>
       ))
       }
