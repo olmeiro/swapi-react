@@ -1,0 +1,114 @@
+
+.dropBtn {
+  border: none;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  padding: 16px;
+  text-align: start;
+  width: 100vw;
+}
+
+.dropBtn svg {
+  margin-right: 15px;
+}
+
+.dropdown{
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  background-color: var(--gray);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  max-width: 600px;
+  min-width: 200px;
+  position: absolute;
+  z-index: 999;
+}
+
+.dropdown-content .link {
+  color: rgb(0, 0, 0);
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+.dropdown-content .link:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropBtn {
+  background-color: var(--yellow);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  .dropdown{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+  .dropBtn {
+    display: none;
+  }
+  .dropdown-content {
+    display: flex;
+    font-weight: 700;
+    justify-content: flex-end;
+    max-width: 960px;
+    min-width: 320px;
+    padding: 16px;
+    position: relative;
+  }
+  .dropdown-content .link:hover {
+    background-color: var(--lowYellow);
+    border-radius: 5px;
+    color: white;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display:flex;
+  }
+  
+  .dropdown:hover .dropBtn {
+    background-color: var(--yellow);
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .dropdown{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+  .dropBtn {
+    display: none;
+  }
+  .dropdown-content {
+    display: flex;
+    font-weight: 700;
+    justify-content: flex-end;
+    max-width: 2720px;
+    min-width: 960px;
+    padding: 16px;
+    position: relative;
+  }
+  .dropdown-content .link:hover {
+    background-color: var(--purple);
+    border-radius: 5px;
+    color: white;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display:flex;
+  }
+  
+  .dropdown:hover .dropBtn {
+    background-color: var(--yellow);
+  }
+}

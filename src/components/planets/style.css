@@ -1,0 +1,107 @@
+
+/* .card-planets */
+.card-planets {
+  background: linear-gradient(180deg, #7A8288, #272B30);
+  border-radius: 5px;
+  box-shadow:  1px 1px 10px 5px var(--green);
+  height: 300px;
+  height: 385px;
+  margin-top: 20px;
+  padding: 5px;
+  width: 200px;
+}
+
+.card-planets article {
+  height: 280px;
+}
+
+.card-planets h2 {
+  color: var(--yellow);
+  text-align: center;
+}
+.card-planets p span {
+  color: var(--black);
+  font-weight: 700;
+}
+.card-planets p  {
+  color: var(--white);
+  text-align: center;
+}
+
+.planets-container{
+  align-items:flex-end;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 10px;
+  margin: 54px;
+}
+
+.link-planet {
+  background-color: var(--lowGray);
+ border-radius: 5px;
+ bottom: -40px;
+ color: var(--black);
+ display: block;
+ margin: 2px;
+ padding: 6px;
+ position: relative;
+ text-align: center;
+ text-decoration: none;
+}
+
+.link-planet:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+picture img{
+  height: 200px;
+  object-fit: cover;
+  width: 300px;
+}
+
+.details {
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 15px;
+}
+
+.details section {
+  margin: 0 auto;
+}
+
+.details section h3 {
+  text-align: center;
+}
+
+.details section ul {
+  margin: 0 auto;
+}
+
+.details-resident>p {
+  border-radius: 50px;
+  border: 1px solid #e5eaed;
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 600;
+  list-style-type: none;
+  margin-top: 3px;
+  padding: 4px 8px;
+  text-align: center;
+  width: 200px;
+}
+
+.details-resident {
+  border-radius: 50px;
+  border: 1px solid #e5eaed;
+  color: var(--black);
+  font-size: 12px;
+  font-weight: 600;
+  list-style-type: none;
+  margin: auto;
+  margin-top: 3px;
+  padding: 4px 8px;
+  text-align: center;
+  width: 200px;
+}
