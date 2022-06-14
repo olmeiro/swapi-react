@@ -37,12 +37,17 @@
   font-weight: 900;
   padding: 6px;
   position: absolute;
-  right: 1.2rem;
+  right: .4rem;
   top: 0.2rem;
 }
 .modal-close:hover {
  background-color: var(--black);
  color: white;
+}
+
+.closeModal {
+  width: 2.2rem;
+  height: 2.2rem;
 }
 
 .modal-container section h2 {

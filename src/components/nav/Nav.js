@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { FiMenu } from "react-icons/fi";
+import { BiHomeCircle, BiHappy, BiPlanet, BiCameraMovie, BiGhost, BiCar, BiCertification } from "react-icons/bi";
 
 import "./style.css";
 
@@ -15,31 +16,31 @@ export const Nav = () => {
 
       <div className="dropdown-content">
         <Link to="/" className="link">
-          Home
+          <BiHomeCircle /> Home
         </Link>
         
         <Link to="/people" className="link">
-          People
+          <BiHappy /> People
         </Link>
         
         <Link to="/planets" className="link">
-          Planets
+          <BiPlanet /> Planets
         </Link>
         
         <Link to="/films" className="link">
-          Films
+          <BiCameraMovie /> Films
         </Link>
         
         <Link to="/species" className="link">
-          Species
+          <BiGhost /> Species
         </Link>
         
         <Link to="/vehicles" className="link">
-          Vehicles
+          <BiCar /> Vehicles
         </Link>
         
         <Link to="/starships" className="link">
-          Starships
+          <BiCertification /> Starships
         </Link>
       </div>
     </nav>
