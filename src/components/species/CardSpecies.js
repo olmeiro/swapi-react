@@ -1,17 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import AppContext from '../../context/AppContext';
-import { getDetails } from '../../helpers/getDetails';
-import useModal from '../../hooks/useModal';
-import Modal from '../modal/Modal';
-import { DetailsSpecies } from './DetailsSpecies';
-
 import { BsEye } from "react-icons/bs";
 
+import { getDetails } from '../../helpers/getDetails';
+import { DetailsSpecies } from './DetailsSpecies';
+import AppContext from '../../context/AppContext';
+import useModal from '../../hooks/useModal';
+
+import Modal from '../modal/Modal';
 
 import './style.css'
 
-export const CardSpecies = ({ data }) => { 
+export const CardSpecies = () => { 
   const [isOpen, openModal, closeModal] = useModal(false);
   const [selected, setSelected] = useState(null);
   const { state } = useContext(AppContext);

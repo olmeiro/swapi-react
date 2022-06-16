@@ -2,15 +2,16 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 import useGetDataApi from "../../hooks/useGetDataApi";
+import AppContext from '../../context/AppContext';
 import { urlPage } from '../../helpers/urlPage'
+import { actions } from '../../actions/actions';
+
+import { Pagination } from '../pagination/Pagination';
 import { Spinner } from '../spinner/Spinner'
 import { CardSpecies } from './CardSpecies';
+import { Footer } from '../footer/Footer';
 
 import './style.css'
-import AppContext from '../../context/AppContext';
-import { actions } from '../../actions/actions';
-import { Pagination } from '../pagination/Pagination';
-import { Footer } from '../footer/Footer';
 
 export const Species = () => {
   let {pathname}  = useLocation()

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useForm } from "../../hooks/useForm";
-import { Footer } from "../footer/Footer";
 import queryString from "query-string";
-import { searchCharacters } from "../../helpers/api";
-
 import axios from "axios";
+
+import { searchCharacters } from "../../helpers/api";
+import { useForm } from "../../hooks/useForm";
+
+import { Footer } from "../footer/Footer";
 
 import "./style.css";
 

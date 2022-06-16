@@ -3,14 +3,15 @@ import { useLocation } from 'react-router-dom'
 
 import useGetDataApi from "../../hooks/useGetDataApi";
 import { urlPage } from '../../helpers/urlPage'
-import { Spinner } from '../spinner/Spinner'
-import { CardPlanets } from './CardPlanets';
-
-import "./style.css";
 import { actions } from '../../actions/actions';
 import AppContext from '../../context/AppContext';
-import { Pagination } from '../pagination/Pagination';
+
+import { Spinner } from '../spinner/Spinner'
+import { CardPlanets } from './CardPlanets';
 import { Footer } from '../footer/Footer';
+import { Pagination } from '../pagination/Pagination';
+
+import "./style.css";
 
 export const Planets = () => {
   let {pathname}  = useLocation()

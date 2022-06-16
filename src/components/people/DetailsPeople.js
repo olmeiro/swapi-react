@@ -14,7 +14,7 @@ export const DetailsPeople = ({homeworld, movies, starships, vehicles}) => {
           {movies.length > 0 ?
             movies.map((movie, idx) => <li key={idx + 1} className='details-movies' >{movie.title}</li>):
             (
-              <p>no aplica</p>
+              <p>N/A</p>
             )}
         </ul>
       </section>
@@ -27,7 +27,7 @@ export const DetailsPeople = ({homeworld, movies, starships, vehicles}) => {
                 <li key={idx + 1} className='details-movies'>{starship.name}</li>
               ))
             ) : (
-              <p>no aplica</p>
+              <p>N/A</p>
             )
           }
         </ul>
@@ -40,7 +40,7 @@ export const DetailsPeople = ({homeworld, movies, starships, vehicles}) => {
                 <li key={idx + 1} className='details-movies'>{vehicle.name}</li>
               ))
             : (
-              <p>no aplica</p>
+              <p>N/A</p>
             )}
         </ul>
       </section>

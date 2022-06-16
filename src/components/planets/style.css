@@ -1,9 +1,8 @@
-
 /* .card-planets */
 .card-planets {
   background: var(--gradient);
   border-radius: 5px;
-  box-shadow:  1px 1px 10px 5px var(--green);
+  box-shadow: 1px 1px 10px 5px var(--green);
   height: 300px;
   height: 385px;
   margin-top: 20px;
@@ -23,39 +22,38 @@
   color: var(--black);
   font-weight: 700;
 }
-.card-planets p  {
+.card-planets p {
   color: var(--white);
   text-align: center;
 }
 
-.planets-container{
-  align-items:flex-end;
+.planets-container {
+  align-items: flex-end;
+  background-attachment: fixed;
+  background-image: url("/public/assets/spaceBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
-  justify-items: center;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
   margin-top: 10px;
-
-  background-image: url('/public/assets/spaceBg.jpg');
-  background-size: cover;
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  background-position: center;
 }
 
 .link-planet {
+  align-items: center;
   background-color: var(--orange);
- border-radius: 5px;
- bottom: -40px;
- color: var(--black);
- display: flex;
- justify-content: center;
- align-items: center;
- margin: 2px;
- padding: 6px;
- position: relative;
- text-align: center;
- text-decoration: none;
+  border-radius: 5px;
+  bottom: -40px;
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+  padding: 6px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
 }
 
 .eye {
@@ -67,7 +65,7 @@
   color: white;
 }
 
-picture img{
+picture img {
   height: 200px;
   object-fit: cover;
   width: 300px;
@@ -91,7 +89,7 @@ picture img{
   margin: 0 auto;
 }
 
-.details-resident>p {
+.details-resident > p {
   border-radius: 50px;
   border: 1px solid #e5eaed;
   color: var(--black);
@@ -111,8 +109,8 @@ picture img{
   font-size: 12px;
   font-weight: 600;
   list-style-type: none;
-  margin: auto;
   margin-top: 3px;
+  margin: auto;
   padding: 4px 8px;
   text-align: center;
   width: 200px;

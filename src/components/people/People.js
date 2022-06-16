@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-import { urlPage } from "../../helpers/urlPage";
-import useGetDataApi from "../../hooks/useGetDataApi";
-import { CardPeople } from "./CardPeople";
-import { Spinner } from "../spinner/Spinner";
-import AppContext from "../../context/AppContext";
 import { actions } from "../../actions/actions";
+import AppContext from "../../context/AppContext";
+import useGetDataApi from "../../hooks/useGetDataApi";
+import { urlPage } from "../../helpers/urlPage";
+
+import { Spinner } from "../spinner/Spinner";
+import { CardPeople } from "./CardPeople";
 import { Pagination } from "../pagination/Pagination";
 import { Footer } from "../footer/Footer";
 

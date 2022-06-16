@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
+import { BsEye } from "react-icons/bs";
+
 import AppContext from '../../context/AppContext';
 import { getDetails } from '../../helpers/getDetails';
 import useModal from '../../hooks/useModal';
-import Modal from '../modal/Modal'
 import { DetailsPeople } from './DetailsPeople';
-import { BsEye } from "react-icons/bs";
+
+import Modal from '../modal/Modal'
 
 import './style.css'
 
