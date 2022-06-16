@@ -3,21 +3,5 @@
   background-color: var(--black);
   position: relative;
   text-align: center;
-  max-width: 320px;
   padding: 16px;
-}
-
-@media only screen and (min-width: 321px) and (max-width: 960px) {
- 
-  .swapi_footer {
-    min-width: 321px;
-    max-width: 960px;
-  }
-}
-
-@media only screen and (min-width: 961px) {
-  .swapi_footer {   position: relative;
-    min-width: 961px;
-    max-width: 2560px;
-  }
 }

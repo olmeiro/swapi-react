@@ -9,13 +9,11 @@ export const SwapiHome = () => {
   return (
     <>
       <div className="swapi-home">
-        <h1>Swapi App</h1>
-      
         <div className="swapi_home-img">
           <img src={imagePath} className="swapi_img" alt={"star-wars-home"} />
         </div>
       </div>
-        <Footer />
+      <Footer />
     </>
   );
 };

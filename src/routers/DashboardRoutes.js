@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import { SwapiHome } from '../components/swapiHome/SwapiHome'
@@ -11,6 +11,7 @@ import { Vehicles } from '../components/vehicles/Vehicles'
 import { Starships } from '../components/starships/Starships'
 import { NotFound } from '../components/NotFound'
 import { Spinner } from '../components/spinner/Spinner'
+import { Search } from '../components/search/Search'
 
 export const DashboardRoutes = () => {
   return (
@@ -37,7 +38,9 @@ export const DashboardRoutes = () => {
 
           <Route path='/starships' element={<Starships />}/>
           <Route path='/starships/:id' element={<Starships />}/>
-          
+
+          <Route path='/search/*' element={<Search />}/>
+ 
           <Route path='/spinner' element={<Spinner />}/>
 
           <Route path='*' element={<NotFound />}/>

@@ -1,4 +1,18 @@
 /* .card-starships */
+
+.starships-container{
+  align-items:flex-end;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  background-image: url('/public/assets/bigShip.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .card-starships {
   background: linear-gradient(180deg, #7A8288, #272B30);
   border-radius: 5px;
@@ -27,17 +41,10 @@
   text-align: center;
 }
 
-.starships-container{
-  align-items:flex-end;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 10px;
-  margin: 54px;
-}
+
 
 .link-starships {
-  background-color: var(--lowGray);
+  background-color: var(--orange);
  border-radius: 5px;
  bottom:0px;
  color: var(--black);
@@ -56,6 +63,6 @@
 }
 
 .link-starships:hover {
-  background-color: var(--lowYellow);
+  background-color: var(--blue);
   color: white;
 }

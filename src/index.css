@@ -7,11 +7,14 @@
   --gray: #7A8288; 
   --lowGray: #C8C8C4;
   --white: rgb(243, 216, 216);
+  --lowWhite: #f1f1f1;
   --black: #000000;
   --purple: #B44FCF;
   --green: #7FA53B;
   --red: #F12D2D;
-  --blue: #5294C3
+  --blue: #5294C3;
+  --orange: #E05F38;
+  --gradient: linear-gradient(#0D1845, #8bb0d8);
 }
 
 #root {

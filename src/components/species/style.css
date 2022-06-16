@@ -27,6 +27,7 @@
 .species-container{
   align-items:flex-end;
   display: grid;
+  justify-items: center;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 10px;
@@ -34,7 +35,7 @@
 }
 
 .link-species {
-  background-color: var(--lowGray);
+  background-color: var(--orange);
  border-radius: 5px;
  bottom: -15px;
  color: var(--black);
@@ -53,7 +54,7 @@
 }
 
 .link-species:hover {
-  background-color: var(--green);
+  background-color: var(--blue);
   color: white;
 }
 

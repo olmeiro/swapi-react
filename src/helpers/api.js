@@ -5,3 +5,5 @@ export const filmsAPI = "https://swapi.dev/api/";
 export const speciesAPI = "https://swapi.dev/api/";
 export const vehiclesAPI = "https://swapi.dev/api/";
 export const starshipsAPI = "https://swapi.dev/api/";
+
+export const searchCharacters = "https://swapi.dev/api/people/?search=";

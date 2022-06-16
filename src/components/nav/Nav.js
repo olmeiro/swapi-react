@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { FiMenu } from "react-icons/fi";
+import { BsSearch } from "react-icons/bs";
 import { BiHomeCircle, BiHappy, BiPlanet, BiCameraMovie, BiGhost, BiCar, BiCertification } from "react-icons/bi";
 
 import "./style.css";
@@ -15,33 +16,36 @@ export const Nav = () => {
       </button>
 
       <div className="dropdown-content">
-        <Link to="/" className="link">
+        <NavLink to="/" className="link">
           <BiHomeCircle /> Home
-        </Link>
+        </NavLink>
         
-        <Link to="/people" className="link">
+        <NavLink to="/people" className="link">
           <BiHappy /> People
-        </Link>
+        </NavLink>
         
-        <Link to="/planets" className="link">
+        <NavLink to="/planets" className="link">
           <BiPlanet /> Planets
-        </Link>
+        </NavLink>
         
-        <Link to="/films" className="link">
+        <NavLink to="/films" className="link">
           <BiCameraMovie /> Films
-        </Link>
+        </NavLink>
         
-        <Link to="/species" className="link">
+        <NavLink to="/species" className="link">
           <BiGhost /> Species
-        </Link>
+        </NavLink>
         
-        <Link to="/vehicles" className="link">
+        <NavLink to="/vehicles" className="link">
           <BiCar /> Vehicles
-        </Link>
+        </NavLink>
         
-        <Link to="/starships" className="link">
+        <NavLink to="/starships" className="link">
           <BiCertification /> Starships
-        </Link>
+        </NavLink>
+        <NavLink to="/search" className="link">
+          <BsSearch /> Search
+        </NavLink>
       </div>
     </nav>
   );

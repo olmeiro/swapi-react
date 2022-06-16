@@ -1,7 +1,7 @@
 
 /* .card-planets */
 .card-planets {
-  background: linear-gradient(180deg, #7A8288, #272B30);
+  background: var(--gradient);
   border-radius: 5px;
   box-shadow:  1px 1px 10px 5px var(--green);
   height: 300px;
@@ -31,14 +31,20 @@
 .planets-container{
   align-items:flex-end;
   display: grid;
+  justify-items: center;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 10px;
-  margin: 54px;
+
+  background-image: url('/public/assets/spaceBg.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .link-planet {
-  background-color: var(--lowGray);
+  background-color: var(--orange);
  border-radius: 5px;
  bottom: -40px;
  color: var(--black);
@@ -57,7 +63,7 @@
 }
 
 .link-planet:hover {
-  background-color: var(--green);
+  background-color: var(--blue);
   color: white;
 }
 

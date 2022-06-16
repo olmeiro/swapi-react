@@ -1,14 +1,21 @@
 .people-container{
-  align-items:flex-end;
   display: grid;
+  justify-items: center;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 10px;
-  margin: 54px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-image: url('/public/assets/spaceBg.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .link-person {
- background-color: var(--lowGray);
+ background-color: var(--orange);
  border-radius: 5px;
  bottom: 58px;
  color: var(--black);
@@ -39,12 +46,15 @@ picture img{
 
 .details {
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid blue;
   margin: 15px;
 }
 
 .details section {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .details section h3 {
@@ -52,7 +62,7 @@ picture img{
 }
 
 .details section ul {
-  margin: 0 auto;
+  padding: 0px;
 }
 
 .details-homeworld>p {
@@ -71,26 +81,23 @@ picture img{
 .details-movies {
   border-radius: 50px;
   border: 1px solid #e5eaed;
-  color: var(--black);
   font-size: 12px;
-  font-weight: 600;
   list-style-type: none;
-  margin: auto;
   margin-top: 3px;
   padding: 4px 8px;
   text-align: center;
-  width: 200px;
 }
 
 /*card-person*/
 
 .card-person {
-  background: linear-gradient(180deg, #7A8288, #272B30);
+  /* background: linear-gradient(180deg, #7A8288, #272B30); */
+  background: var(--gradient);
   border-radius: 5px;
   box-shadow:  1px 1px 10px 5px var(--purple);
   height: 300px;
   height: 338px;
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 5px;
   width: 200px;
 }
@@ -104,7 +111,7 @@ picture img{
   font-weight: 700;
 }
 .card-person p {
-  color: var(--blue);
+  color: var(--white);
   text-align: center;
 }
 

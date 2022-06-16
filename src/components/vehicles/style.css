@@ -26,10 +26,16 @@
 .vehicles-container{
   align-items:flex-end;
   display: grid;
+  justify-items: center;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 10px;
-  margin: 54px;
+
+  background-image: url('/public/assets/spaceBg.jpg');
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .card-vehicle_article {
@@ -37,7 +43,7 @@
 }
 
 .link-vehicle {
-  background-color: var(--lowGray);
+  background-color: var(--orange);
  border-radius: 5px;
  bottom: 5px;
  color: var(--black);
@@ -55,7 +61,7 @@
   margin-right: 5px;
 }
 
-.link-planet:hover {
-  background-color: var(--green);
+.link-vehicle:hover {
+  background-color: var(--blue);
   color: white;
 }
