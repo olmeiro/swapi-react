@@ -1,0 +1,40 @@
+.notFound-container {
+  background-attachment: fixed;
+  background-image: url("/public/assets/spaceCleanpng.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 83vh;
+  top: 34px;
+  position: relative;
+}
+
+.notFound-container section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notFound-container section h1 {
+  border: 1px solid red;
+  border-radius: 5px;
+  margin: 10px;
+  color: yellow;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+@media screen and (min-width:830px){
+  .notFound-container {
+
+    top: 0;
+
+  }
+}

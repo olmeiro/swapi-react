@@ -9,9 +9,9 @@ import { Films } from "../components/films/Films";
 import { Species } from "../components/species/Species";
 import { Vehicles } from "../components/vehicles/Vehicles";
 import { Starships } from "../components/starships/Starships";
-import { NotFound } from "../components/NotFound";
 import { Spinner } from "../components/spinner/Spinner";
 import { Search } from "../components/search/Search";
+import { NotFound } from "../components/notFound/NotFound";
 
 export const DashboardRoutes = () => {
   return (

@@ -50,6 +50,10 @@
 .dropdown-content .link:hover {
   background-color: var(--lowWhite)
 }
+.dropdown-content .link:focus          {
+  background-color: var(--lowWhite);
+  border-radius: 5px;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -106,7 +110,6 @@
 
   .dropdown-content .link:hover {
     background-color: var(--lowWhite);
-    color: var(--black);
     border-radius: 5px;}
 
   .active {
